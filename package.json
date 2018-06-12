@@ -1,7 +1,7 @@
 {
-  "name": "gsm-modem",
+  "name": "gsm.ts",
   "description": "A package for controlling gsm modem connected to serial port using AT commands",
-  "version": "0.3.19",
+  "version": "1.3.19",
   "author": "Yuuki Wesp",
   "license": "MIT",
   "dependencies": {
@@ -9,12 +9,9 @@
     "pdu.ts": "^1.1.4",
     "serialport": "^6.2.0"
   },
-  "engines": {
-    "node": ">=0.10"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paintenzero/node-gsm-modem.git"
+    "url": "https://github.com/0xF6/gsm.ts.git"
   },
   "devDependencies": {
     "@types/node": "^10.3.2",
