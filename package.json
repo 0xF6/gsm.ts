@@ -2,10 +2,12 @@
   "name": "gsm-modem",
   "description": "A package for controlling gsm modem connected to serial port using AT commands",
   "version": "0.3.19",
-  "author": "Sergey Birukov <sergeyb26@gmail.com>",
+  "author": "Yuuki Wesp",
+  "license": "MIT",
   "dependencies": {
-    "intel": "^1.0.2",
-    "serialport": "^2.0.5"
+    "log4js": "^2.8.0",
+    "pdu.ts": "^1.1.4",
+    "serialport": "^6.2.0"
   },
   "engines": {
     "node": ">=0.10"
@@ -13,5 +15,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/paintenzero/node-gsm-modem.git"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.2",
+    "@types/serialport": "^6.0.1",
+    "typescript": "^2.9.1"
+  },
+  "scripts": {
+    "build": "tsc --declaration",
+    "example": "yarn build && node ./build/example.js"
   }
 }
