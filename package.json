@@ -1,7 +1,7 @@
 {
   "name": "gsm.ts",
   "description": "A package for controlling gsm modem connected to serial port using AT commands",
-  "version": "1.3.23",
+  "version": "1.3.24",
   "author": "Yuuki Wesp",
   "license": "MIT",
   "main": "./build/gsm.js",
