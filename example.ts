@@ -1,4 +1,4 @@
-import { Modem } from "./src";
+import { GSMModem } from "./src";
 console.log("start");
 
 function onSMS(sms) {
@@ -11,7 +11,7 @@ function onStatusReport(report) {
     console.log('onStatusReport', report);
 }
 
-var modem1 = new Modem({
+var modem1 = new GSMModem({
     port: '/dev/ttyUSB0',
     notify_port: '/dev/ttyUSB1',
     debug: true

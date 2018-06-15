@@ -1,4 +1,4 @@
-import { Modem, Callback } from './gsm';
+import { GSMModem, Callback } from './gsm';
 
 /**
  * Queue to send parts of the message
@@ -8,7 +8,7 @@ export class PartsSendQueue {
     public references = [];
     public trackingObj: any;
 
-    constructor(public modem: Modem, public parts: Array<any>, public cb?: Callback) { }
+    constructor(public modem: GSMModem, public parts: Array<any>, public cb?: Callback) { this.trackingObj = {}; }
 
     public onSend(data) {
         var match = data.match(/\+CMGS:\s*(\d+)/);

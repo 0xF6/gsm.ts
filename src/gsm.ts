@@ -18,7 +18,7 @@ export type ModemOptions = {
 export type Callback<T = any, E = any> = (err?: E, data?: T) => void;
 export type Storage = '"ME"' | '"SM"' | '"ST"' | string;
 export type Signal = { db: number, condition: "unknown" | "marginal" | "workable" | "good" | "excellent" };
-export class Modem extends EventEmitter {
+export class GSMModem extends EventEmitter {
 	/**
 	 * Constructor for the modem
 	 * Possible options:
@@ -55,7 +55,7 @@ export class Modem extends EventEmitter {
 
         this.forever = opts.forever;
 
-        //this.connectingHandle;
+        this.connectingHandle;
 
         this.logger = getLogger("gsm");
 
@@ -94,7 +94,6 @@ export class Modem extends EventEmitter {
         var serialPort = new SerialPort(port, {
             baudRate: 115200,
         });
-        cb();
         var commandTimeout;
         serialPort.on(
             'open',
@@ -1029,7 +1028,7 @@ export class Modem extends EventEmitter {
     public connectingHandle: number;
     public willReceiveEcho: boolean;
     public messageParts: any;
-    public deliveryParts: Array<any>
+    public deliveryParts: Array<any> = [];
 
     // events
 

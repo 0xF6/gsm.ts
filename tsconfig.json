@@ -20,15 +20,15 @@
     },
     "filesGlob": [
         "./src/**/*.ts",
-        "!node_modules/**/*",
-        "example.ts"
+        "!node_modules/**/*"
     ],
     "exclude": [
         "node_modules",
         "test",
         "dist",
         "build",
-        "index.d.ts"
+        "index.d.ts",
+        "example.ts"
     ],
     "compileOnSave": true
 }
